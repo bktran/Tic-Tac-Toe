@@ -9,7 +9,7 @@ const App = () => {
 
   const handleGamePlay = (clickedSquareIndex) => {
     let updatedSquares = [...squares]
-
+    if (updatedSquares[clickedSquareIndex] === null) {
       if (player === "p1") {
         updatedSquares[clickedSquareIndex]= "❌"
         setSquares(updatedSquares)
@@ -20,6 +20,7 @@ const App = () => {
         setSquares(updatedSquares)
         setPlayer("p1")
       }
+    }
   }
 
   return (
