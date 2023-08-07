@@ -21,6 +21,9 @@ When creating a project it is important to think about organization of your code
 //we assigned p2 "O"
 
 - As a user, I can't click on a square that has already been marked.
+branch: mark-square
+// added fuctionality for click not to register inalready clicked square
+
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
