@@ -16,7 +16,10 @@ When creating a project it is important to think about organization of your code
 // added 3x3 gameboard
 - As a user, I can click on a square to mark it.
 // will need a array to keep track of players mark
+// we assigned p1 "❌"
 - As a user, my partner can click on a square after me and see their mark.
+//we assigned p2 "O"
+
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 - As a user, I can't continue playing the game after the game has been won.

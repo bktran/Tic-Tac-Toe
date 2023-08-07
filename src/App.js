@@ -4,18 +4,22 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
-  const [player, setPlayer] = useState(["p1","p2","p1","p2","p1","p2","p1","p2","p1","p2"])
+  const [player, setPlayer] = useState("p1")
 
-  let i = 0
 
   const handleGamePlay = (clickedSquareIndex) => {
     let updatedSquares = [...squares]
 
-      if (player[i] === "p1") {
+      if (player === "p1") {
         updatedSquares[clickedSquareIndex]= "❌"
-        setSquares = updatedSquares
+        setSquares(updatedSquares)
+        setPlayer("p2")
       }
-      i++
+      if (player === "p2") {
+        updatedSquares[clickedSquareIndex]= "🅾️"
+        setSquares(updatedSquares)
+        setPlayer("p1")
+      }
   }
 
   return (
@@ -23,7 +27,11 @@ const App = () => {
       <h1 className='title'>Tic Tac Toe</h1>
       <div className='square-board'>
         {squares.map((square, index)=> {
-          return <Square square = {squares} index={index} handleGamePlay={handleGamePlay}/>
+          return (<Square 
+            square={square} 
+            index={index} 
+            key={index}
+            handleGamePlay={handleGamePlay}/>)
         })}
       </div>
     </>
