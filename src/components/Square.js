@@ -15,8 +15,6 @@ const Square = ({square, index, handleGamePlay}) => {
 }
 export default Square
 
-
-
 // function calculateWinner(squares) {
 //   const lines = [
 //     [0, 1, 2],
