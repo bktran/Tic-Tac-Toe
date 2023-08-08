@@ -34,8 +34,8 @@ body {
 
 .square {
   border: 2px solid black;
-  height: 175px;
-  width: 175px;
+  height: 165px;
+  width: 165px;
   display:grid;
   place-items: center;
   font-size: 85px;
@@ -57,7 +57,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 537px;
+  width: 515px;
   opacity: 80%;
 
 }
@@ -65,14 +65,14 @@ body {
 .title {
   text-align: center;
   color: white;
-  font-size: 70px;
+  font-size: 60px;
   animation: tilt-n-move-shaking 0.750s infinite;
 }
 
 .winnertitle {
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
