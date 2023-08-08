@@ -1,23 +1,44 @@
+body {
+  background-image: url(img/bbqtable.jpg);
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+  background-attachment: fixed;
+
+ 
+}
+
 .square {
   border: 2px solid black;
-  height: 100px;
-  width: 100px;
+  height: 175px;
+  width: 175px;
+  display:grid;
+  place-items: center;
+  font-size: 50px;
+  background-color: white;
 }
 
 .square-board {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 320px
+  width: 537px
+  
+  
 
 }
 
 .title {
   text-align: center;
+  color: white;
+  font-size: 70px;
 }
 
 .winnertitle {
   text-align: center;
+  color: white;
+  font-size: 30px;
 }
 
 .button {
