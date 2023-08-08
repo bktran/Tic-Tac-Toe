@@ -78,6 +78,10 @@ body {
 
 .buttonContainer {
   text-align: center;
+  font-size: 25px;
+  color: #fff;
+  animation: tilt-n-move-shaking 0.750s infinite;
+
 }
 
 .button{
@@ -106,4 +110,11 @@ h1 {
   animation: flip 1.5s infinite;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 50px;
+}
+
+.footer {
+  text-align: left;
+  font-size: 20px;
+  color: #950505;
+  
 }

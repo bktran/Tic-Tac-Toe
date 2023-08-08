@@ -14,9 +14,11 @@ When creating a project it is important to think about organization of your code
 - As a user, I can see a three by three grid game board on the page. 
 // branch: gameboard
 // added 3x3 gameboard
+
 - As a user, I can click on a square to mark it.
 // will need a array to keep track of players mark
 // we assigned p1 "❌"
+
 - As a user, my partner can click on a square after me and see their mark.
 //we assigned p2 "O"
 
@@ -37,14 +39,18 @@ branch: game over
 - As a user, I can click on a restart button that will clear the game board.
 branch: restart button
 //added a restart button
+// added "created by footer" 
 
 ### 🏔 Stretch Goals
 
 - As a user, I can see a pleasant stylings on the application.
-
 branch: stylez
-added styling to the page
+//added styling to the page
+    -text and animation styling
+    -
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
+branch: whose-turn
+
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 
 ### 👩‍💻 Developer Stretch Goals

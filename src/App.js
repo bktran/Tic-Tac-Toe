@@ -5,9 +5,8 @@ import './App.css'
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [player, setPlayer] = useState("p1")
-  // const [playerOneHistory, setPlayerOneHistory] = useState([])
-  // const [playerTwoHistory, setPlayerTwoHistory] = useState([])
   const [winner, setWinner] = useState(null)
+  
   const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
@@ -35,25 +34,22 @@ const App = () => {
       return
     }
 
-
     // updates the square after a click
     let updatedSquares = [...squares]
     if (updatedSquares[clickedSquareIndex] === null) {
       if (player === "p1") {
-        updatedSquares[clickedSquareIndex]= "🍖"
-        setSquares(updatedSquares)
+        updatedSquares[clickedSquareIndex]= "🐮"
         setPlayer("p2")
       }
-      if (player === "p2") {
-        updatedSquares[clickedSquareIndex]= "🍗"
-        setSquares(updatedSquares)
+      else if (player === "p2") {
+        updatedSquares[clickedSquareIndex]= "🐔"
         setPlayer("p1")
       }
+      setSquares(updatedSquares)
       const theWinner = calculateWinner(updatedSquares)
       setWinner(theWinner)
       console.log(theWinner)
     }
-
   }
 
     // displays messages based on conditions above
@@ -66,6 +62,15 @@ const App = () => {
     }
     else {
       return <h1>The Winner Is ....</h1>
+    }
+  }
+
+  const displayTurn = () => {
+    if (player === "p1") {
+      return <h1>🐮's turn!</h1>
+    }
+    else if (player === "p2") {
+      return <h1>🐔's turn!</h1>
     }
   }
 
@@ -96,8 +101,10 @@ const App = () => {
 
       <div className="buttonContainer">
       <button className="button" onClick={restartButton}>Restart</button>
+      {displayTurn()}
       </div>
     </body>
+    <footer className="footer">Created By: Bao, Kiana, & Megan</footer>
     </>
   )
 }
