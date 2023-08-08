@@ -41,6 +41,9 @@ branch: restart button
 ### 🏔 Stretch Goals
 
 - As a user, I can see a pleasant stylings on the application.
+
+branch: stylez
+added styling to the page
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 
