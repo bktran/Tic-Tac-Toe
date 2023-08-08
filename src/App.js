@@ -70,7 +70,9 @@ const App = () => {
     }
   }
 
-
+  const restartButton = () => {
+    setSquares(Array(9).fill(null))
+  }
   return (
     <>
       <h1 className='title'>Tic Tac Toe</h1>
@@ -86,6 +88,10 @@ const App = () => {
 
       <div className='winnertitle'>
         {renderMessage()}
+      </div>
+
+      <div className='button'>
+      <button onClick={restartButton}>Restart</button>
       </div>
     </>
   )
