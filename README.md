@@ -31,6 +31,9 @@ branch: winning condition
 
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+branch: game over
+// added game over text and emojis letting the players know game is over
+
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals
