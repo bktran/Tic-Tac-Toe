@@ -28,7 +28,6 @@ const App = () => {
     return null;
   }  
 
-
   const handleGamePlay = (clickedSquareIndex) => {
 
     // this stops the gameplay from players continuing to play after a win
@@ -46,7 +45,7 @@ const App = () => {
         setPlayer("p2")
       }
       if (player === "p2") {
-        updatedSquares[clickedSquareIndex]= "🌭"
+        updatedSquares[clickedSquareIndex]= "🍗"
         setSquares(updatedSquares)
         setPlayer("p1")
       }
@@ -60,10 +59,10 @@ const App = () => {
     // displays messages based on conditions above
   const renderMessage = () => {
     if (winner) {
-      return <h1>{winner} Wins ! <br></br> Game Over 🐷☠️</h1> 
+      return <h1 className="winner">{winner} Wins ! <br></br> Game Over 🐷☠️</h1> 
     }
     else if (squares.every(value => value !== null)) {
-      return <h1>No Winners Today !<br></br> Game Over 🐷☠️</h1>
+      return <h1 className="tie">No Winners Today !<br></br> Game Over 🐷☠️</h1>
     }
     else {
       return <h1>The Winner Is ....</h1>
@@ -86,17 +85,17 @@ const App = () => {
             square={square} 
             index={index} 
             key={index}
-            handleGamePlay={handleGamePlay}/>)
+            handleGamePlay={handleGamePlay}
+            currentPlayer ={player}/>)
         })}
-      <button onClick={restartButton}>Restart</button>
       </div>
 
       <div className='winnertitle'>
         {renderMessage()}
       </div>
 
-      <div className='button'>
-      <button onClick={restartButton}>Restart</button>
+      <div className="buttonContainer">
+      <button className="button" onClick={restartButton}>Restart</button>
       </div>
     </body>
     </>
