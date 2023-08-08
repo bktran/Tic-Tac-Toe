@@ -30,6 +30,14 @@ const App = () => {
 
 
   const handleGamePlay = (clickedSquareIndex) => {
+
+    // this stops the gameplay from players continuing to play after a win
+    if (winner) {
+      return
+    }
+
+
+    // updates the square after a click
     let updatedSquares = [...squares]
     if (updatedSquares[clickedSquareIndex] === null) {
       if (player === "p1") {
@@ -46,14 +54,16 @@ const App = () => {
       setWinner(theWinner)
       console.log(theWinner)
     }
+
   }
 
+    // displays messages based on conditions above
   const renderMessage = () => {
     if (winner) {
-      return <h1>{winner} Wins !</h1>
+      return <h1>{winner} Wins ! <br></br> Game Over 👾</h1> 
     }
     else if (squares.every(value => value !== null)) {
-      return <h1>No Winners Today !</h1>
+      return <h1>No Winners Today !<br></br> Game Over 👾</h1>
     }
     else {
       return <h1>The Winner Is ....</h1>
