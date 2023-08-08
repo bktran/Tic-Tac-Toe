@@ -41,12 +41,12 @@ const App = () => {
     let updatedSquares = [...squares]
     if (updatedSquares[clickedSquareIndex] === null) {
       if (player === "p1") {
-        updatedSquares[clickedSquareIndex]= "❌"
+        updatedSquares[clickedSquareIndex]= "🍖"
         setSquares(updatedSquares)
         setPlayer("p2")
       }
       if (player === "p2") {
-        updatedSquares[clickedSquareIndex]= "🅾️"
+        updatedSquares[clickedSquareIndex]= "🌭"
         setSquares(updatedSquares)
         setPlayer("p1")
       }
@@ -60,22 +60,26 @@ const App = () => {
     // displays messages based on conditions above
   const renderMessage = () => {
     if (winner) {
-      return <h1>{winner} Wins ! <br></br> Game Over 👾</h1> 
+      return <h1>{winner} Wins ! <br></br> Game Over 🐷☠️</h1> 
     }
     else if (squares.every(value => value !== null)) {
-      return <h1>No Winners Today !<br></br> Game Over 👾</h1>
+      return <h1>No Winners Today !<br></br> Game Over 🐷☠️</h1>
     }
     else {
       return <h1>The Winner Is ....</h1>
     }
   }
 
+  //resetting all states
   const restartButton = () => {
     setSquares(Array(9).fill(null))
+    setWinner(null)
+    setPlayer("p1")
   }
   return (
     <>
-      <h1 className='title'>Tic Tac Toe</h1>
+    <body>
+      <h1 className='title'>Tic Tac BBQ</h1>
       <div className='square-board'>
         {squares.map((square, index)=> {
           return (<Square 
@@ -84,6 +88,7 @@ const App = () => {
             key={index}
             handleGamePlay={handleGamePlay}/>)
         })}
+      <button onClick={restartButton}>Restart</button>
       </div>
 
       <div className='winnertitle'>
@@ -93,6 +98,7 @@ const App = () => {
       <div className='button'>
       <button onClick={restartButton}>Restart</button>
       </div>
+    </body>
     </>
   )
 }
