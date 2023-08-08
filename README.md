@@ -35,6 +35,8 @@ branch: game over
 // added game over text and emojis letting the players know game is over
 
 - As a user, I can click on a restart button that will clear the game board.
+branch: restart button
+//added a restart button
 
 ### 🏔 Stretch Goals
 
